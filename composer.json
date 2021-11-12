@@ -1,0 +1,26 @@
+{
+    "name": "kazi-shahin/acl",
+    "description": "Your can get ACL based role permissions",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Amimul Ehshan",
+            "email": "amimulehshan29@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "KaziShahin\\Acl\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "KaziShahin\\Acl\\AclServiceProvider"
+            ]
+        }
+    }
+}
