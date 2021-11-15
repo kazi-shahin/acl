@@ -37,6 +37,9 @@ class AclServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        $this->registerMigrations();
+
         AclHelper::getPermissions()->map(function ($permission) {
             Gate::define($permission->name, function ($user) use ($permission) {
                 return $user->hasPermissionTo($permission);
